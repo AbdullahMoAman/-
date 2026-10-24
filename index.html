@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="موقع ترجمات السنة - دليلك الشامل في صفة الحج والعمرة، أحكامها، أحاديثها، وهدي النبي ﷺ"
+    />
+    <title>تَرجَمَاتُ السُّنَّة - الحج والعمرة</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ====== HEADER & NAV ====== -->
+    <header class="site-header" id="top">
+      <nav class="navbar" role="navigation" aria-label="القائمة الرئيسية">
+        <a href="#top" class="logo" aria-label="ترجمات السنة - الصفحة الرئيسية">
+          <span class="logo-main">جمعية </span>
+          <span class="logo-accent"> السنة النبوية</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="فتح القائمة"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">تعريف</a></li>
+          <li><a href="#rulings">الأحكام</a></li>
+          <li><a href="#manasik">المناسك</a></li>
+          <li><a href="#hadiths">الأحاديث</a></li>
+          <li><a href="#hady">هدي النبي</a></li>
+          <li><a href="#companions">أقوال الصحابة</a></li>
+          <li><a href="#umrah">العمرة</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="hero" aria-label="مقدمة الموقع">
+      <div class="hero-overlay"></div>
+      <figure class="hero-image-wrap">
+        <img
+          src="images/Alkaba.jpg"
+          alt="الكعبة المشرفة والمسجد الحرام"
+          class="hero-img"
+          loading="eager"
+          onerror="this.closest('figure').classList.add('img-placeholder')"
+        />
+      </figure>
+
+      <div class="hero-content">
+        <p class="hero-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <h1 class="hero-title">
+          الحَجُّ والعُمرة
+          <span class="hero-subtitle">على هَديِ النَّبيِّ ﷺ</span>
+        </h1>
+        <p class="hero-verse">
+          ﴿ وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ ﴾
+          <cite>سورة البقرة: ١٩٦</cite>
+        </p>
+        <a href="#about" class="btn-hero" aria-label="ابدأ القراءة"
+          >ابدأ الرحلة</a
+        >
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-arrow"></span>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="about-heading">تَعريف الحج والعُمرة</h2>
+          <div class="divider" aria-hidden="true"><span>✦</span></div>
+        </header>
+
+        <div class="cards-grid">
+          <article class="card card-hajj">
+            <figure class="card-img-wrap">
+              <img
+                src="images/hjjaj.jpeg"
+                alt="حجاج بيت الله الحرام"
+                loading="lazy"
+                onerror="
+                  this.closest('figure').classList.add('img-placeholder')
+                "
+              />
+            </figure>
+            <div class="card-body">
+              <h3>الحَجّ</h3>
+              <p>
+                الحجُّ لغةً: القصدُ. واصطلاحاً: قصدُ البيتِ الحرامِ لأداءِ
+                مناسكَ مخصوصة، في زمنٍ مخصوص، على صفةٍ مخصوصة.
+              </p>
+              <p>
+                وهو الركنُ الخامسُ من أركان الإسلام، فرضَهُ الله تعالى على
+                المستطيع مرةً في العُمُر.
+              </p>
+              <blockquote>
+                <p>«بُنِيَ الإسلامُ على خمسٍ، وذكرَ منها حجُّ البيت»</p>
+                <cite>متفق عليه</cite>
+              </blockquote>
+            </div>
+          </article>
+
+          <article class="card card-umrah">
+            <figure class="card-img-wrap">
+              <img
+                src="images/umrah.jpg"
+                alt="الطواف حول الكعبة المشرفة"
+                loading="lazy"
+                onerror="
+                  this.closest('figure').classList.add('img-placeholder')
+                "
+              />
+            </figure>
+            <div class="card-body">
+              <h3>العُمرة</h3>
+              <p>
+                العُمرةُ لغةً: الزيارة. واصطلاحاً: قصدُ البيتِ الحرام للطوافِ
+                والسعيِ والحلقِ أو التقصير، في غيرِ وقتِ الحج.
+              </p>
+              <p>
+                وهي واجبةٌ على الصحيح من أقوال العلماء، وقد أدّاها النبيُّ ﷺ
+                أربعَ مرات.
+              </p>
+              <blockquote>
+                <p>
+                  «العمرةُ إلى العمرة كفارةٌ لما بينهما، والحجُّ المبرورُ ليس له
+                  جزاءٌ إلا الجنة»
+                </p>
+                <cite>رواه مسلم</cite>
+              </blockquote>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== RULINGS ====== -->
+    <section
+      class="section section-alt"
+      id="rulings"
+      aria-labelledby="rulings-heading"
+    >
+      <div class="container">
+        <header class="section-header">
+          <h2 id="rulings-heading">الأحكام والشروط</h2>
+          <div class="divider" aria-hidden="true"><span>✦</span></div>
+        </header>
+
+        <div class="tabs-wrap" role="tablist" aria-label="أحكام الحج والعمرة">
+          <button
+            class="tab-btn active"
+            role="tab"
+            aria-selected="true"
+            data-tab="conditions"
+          >
+            شروط الوجوب
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            data-tab="pillars"
+          >
+            الأركان
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            data-tab="wajibat"
+          >
+            الواجبات
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            data-tab="sunnan"
+          >
+            السنن
+          </button>
+        </div>
+
+        <div class="tab-content active" id="tab-conditions" role="tabpanel">
+          <ul class="ruling-list">
+            <li>
+              <span class="ruling-num">١</span><strong>الإسلام:</strong> فلا يجب
+              الحج على الكافر.
+            </li>
+            <li>
+              <span class="ruling-num">٢</span><strong>العقل:</strong> فلا يجب
+              على المجنون.
+            </li>
+            <li>
+              <span class="ruling-num">٣</span><strong>البلوغ:</strong> فلا يجب
+              على الصغير، ولو حجَّ أُجزئه تطوعاً.
+            </li>
+            <li>
+              <span class="ruling-num">٤</span><strong>الحرية:</strong> فلا يجب
+              على العبد المملوك.
+            </li>
+            <li>
+              <span class="ruling-num">٥</span><strong>الاستطاعة:</strong> الزاد
+              والراحلة وأمن الطريق والصحة البدنية.
+            </li>
+            <li>
+              <span class="ruling-num">٦</span
+              ><strong>المحرم للمرأة:</strong> شرط إضافي للمرأة عند جمهور
+              العلماء.
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="tab-pillars" role="tabpanel" hidden>
+          <ul class="ruling-list">
+            <li>
+              <span class="ruling-num">١</span><strong>الإحرام:</strong> النية
+              بالدخول في النسك.
+            </li>
+            <li>
+              <span class="ruling-num">٢</span
+              ><strong>الوقوف بعرفة:</strong> ركن الحج الأعظم، من زوال يوم
+              التاسع إلى فجر يوم العيد.
+            </li>
+            <li>
+              <span class="ruling-num">٣</span
+              ><strong>طواف الإفاضة:</strong> الطواف بالبيت بعد الوقوف بعرفة.
+            </li>
+            <li>
+              <span class="ruling-num">٤</span><strong>السعي:</strong> بين الصفا
+              والمروة سبعة أشواط.
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="tab-wajibat" role="tabpanel" hidden>
+          <ul class="ruling-list">
+            <li>
+              <span class="ruling-num">١</span
+              ><strong>الإحرام من الميقات:</strong> المواقيت المكانية المحددة
+              شرعاً.
+            </li>
+            <li>
+              <span class="ruling-num">٢</span
+              ><strong>المبيت بمزدلفة:</strong> ليلة العيد بعد الإفاضة من عرفة.
+            </li>
+            <li>
+              <span class="ruling-num">٣</span
+              ><strong>المبيت بمنى:</strong> ليالي أيام التشريق.
+            </li>
+            <li>
+              <span class="ruling-num">٤</span
+              ><strong>رمي الجمرات:</strong> جمرة العقبة يوم العيد وأيام
+              التشريق.
+            </li>
+            <li>
+              <span class="ruling-num">٥</span
+              ><strong>الحلق أو التقصير:</strong> بعد رمي جمرة العقبة يوم العيد.
+            </li>
+            <li>
+              <span class="ruling-num">٦</span><strong>طواف الوداع:</strong> آخر
+              عهد الحاج بالبيت.
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="tab-sunnan" role="tabpanel" hidden>
+          <ul class="ruling-list">
+            <li>
+              <span class="ruling-num">١</span
+              ><strong>التلبية:</strong> «لَبَّيكَ اللَّهُمَّ لَبَّيكَ» ورفع
+              الصوت بها للرجل.
+            </li>
+            <li>
+              <span class="ruling-num">٢</span
+              ><strong>الاغتسال للإحرام:</strong> وتطيب الجسد قبل الإحرام.
+            </li>
+            <li>
+              <span class="ruling-num">٣</span
+              ><strong>الرَّمَل:</strong> الإسراع في الأشواط الثلاثة الأولى من
+              الطواف.
+            </li>
+            <li>
+              <span class="ruling-num">٤</span><strong>الاضطباع:</strong> كشف
+              الكتف الأيمن في الطواف.
+            </li>
+            <li>
+              <span class="ruling-num">٥</span
+              ><strong>الذكر والدعاء:</strong> في جميع المشاعر والمواقف.
+            </li>
+            <li>
+              <span class="ruling-num">٦</span
+              ><strong>استلام الحجر الأسود:</strong> في بداية كل شوط.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== MANASIK (STEPS) ====== -->
+    <section class="section" id="manasik" aria-labelledby="manasik-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="manasik-heading">صِفةُ الحَجّ خُطوةً خُطوة</h2>
+          <div class="divider" aria-hidden="true"><span>✦</span></div>
+          <p class="section-intro">
+            يبدأ الحاجُّ رحلتَه من الإحرام حتى طواف الوداع، وفيما يلي أبرز
+            المحطات:
+          </p>
+        </header>
+
+        <ol class="timeline" aria-label="خطوات الحج">
+          <li class="timeline-item" data-step="١">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>الإحرام من الميقات</h3>
+              <p>
+                يغتسل الحاجُّ ويتطيَّب ويرتدي ثوبَي الإحرام، ثم ينوي الإحرام
+                بالحج قائلاً: «لَبَّيكَ اللَّهُمَّ حَجًّا»، ويستمرُّ في التلبية.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item" data-step="٢">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>الدخول إلى مكة والطواف</h3>
+              <p>
+                يدخل مكة مُكبِّراً، ويبدأ طواف القدوم من الحجر الأسود مُستلِماً
+                إياه إن أمكن، سبعةَ أشواطٍ حول الكعبة.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item" data-step="٣">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>السعي بين الصفا والمروة</h3>
+              <p>
+                يسعى الحاجُّ سبعةَ أشواط بين الصفا والمروة، يبدأ بالصفا ويختم
+                بالمروة، ذاكراً اللهَ داعياً في كل شوط.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item" data-step="٤">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>يوم التروية — ٨ ذو الحجة</h3>
+              <p>
+                يتوجَّه الحاجُّ إلى منى فيصلِّي بها الظهرَ والعصرَ والمغرب
+                والعشاءَ والفجرَ، كلَّ صلاةٍ في وقتها قصراً.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item" data-step="٥">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>يوم عرفة — ٩ ذو الحجة</h3>
+              <p>
+                يتوجَّه إلى عرفة بعد طلوع الشمس ويستمرُّ حتى غروب الشمس، مشغولاً
+                بالذكر والدعاء والتلبية. وهذا هو ركنُ الحج الأعظم.
+              </p>
+              <blockquote>
+                <p>«الحجُّ عَرَفَة»</p>
+                <cite>رواه الترمذي وصححه الألباني</cite>
+              </blockquote>
+            </article>
+          </li>
+
+          <li class="timeline-item" data-step="٦">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>المبيت بمزدلفة — ليلة العيد</h3>
+              <p>
+                يُفيض من عرفة بعد الغروب إلى مزدلفة، يصلِّي المغرب والعشاء جمعاً
+                وقصراً، ويبيت حتى يصلِّي الفجر، ثم يلتقط حصى الجمرات.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item" data-step="٧">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>يوم العيد — ١٠ ذو الحجة</h3>
+              <p>
+                يُفيض من مزدلفة إلى منى ليرمي جمرةَ العقبة بسبع حصيات، ثم يذبح
+                الهَدْي، ثم يَحلق أو يُقصِّر، ثم يُفيض إلى مكة لطواف الإفاضة
+                والسعي.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item" data-step="٨">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>أيام التشريق — ١١، ١٢، ١٣ ذو الحجة</h3>
+              <p>
+                المبيتُ بمنى، ورميُ الجمرات الثلاث في كلِّ يوم بعد الزوال. ومن
+                تعجَّل نفر في اليوم الثاني عشر.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item" data-step="٩">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-content">
+              <h3>طواف الوداع</h3>
+              <p>
+                آخرُ عهدِ الحاجِّ بالبيت قبل مغادرة مكة، يطوف سبعةَ أشواط، ثم
+                يخرج ولا يلتفت، ويكون قلبُه معلَّقاً بالبيت.
+              </p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====== HADITHS ====== -->
+    <section
+      class="section section-alt"
+      id="hadiths"
+      aria-labelledby="hadiths-heading"
+    >
+      <div class="container">
+        <header class="section-header">
+          <h2 id="hadiths-heading">أحاديثُ في فضلِ الحجِّ والعمرة</h2>
+          <div class="divider" aria-hidden="true"><span>✦</span></div>
+        </header>
+
+        <div
+          class="hadith-slider"
+          role="region"
+          aria-label="عرض الأحاديث"
+          aria-live="polite"
+        >
+          <div class="hadith-track" id="hadithTrack">
+            <blockquote class="hadith-card">
+              <div class="hadith-icon" aria-hidden="true">📿</div>
+              <p>
+                «مَن حَجَّ لِلَّهِ فلمْ يَرْفُثْ، ولَمْ يَفْسُقْ، رَجَعَ كَيَومِ
+                وَلَدَتْهُ أُمُّهُ»
+              </p>
+              <footer>
+                <cite>متفق عليه — من حديث أبي هريرة رضي الله عنه</cite>
+              </footer>
+            </blockquote>
+
+            <blockquote class="hadith-card">
+              <div class="hadith-icon" aria-hidden="true">📿</div>
+              <p>
+                «العُمرةُ إلى العُمرةِ كفَّارةٌ لِمَا بَيْنَهُمَا، والحجُّ
+                المبرورُ ليسَ له جزاءٌ إلَّا الجنَّة»
+              </p>
+              <footer>
+                <cite>رواه مسلم — من حديث أبي هريرة رضي الله عنه</cite>
+              </footer>
+            </blockquote>
+
+            <blockquote class="hadith-card">
+              <div class="hadith-icon" aria-hidden="true">📿</div>
+              <p>
+                «تابِعوا بَيْنَ الحَجِّ والعُمرةِ، فإنَّهُما يَنفِيَانِ الفقرَ
+                والذُّنوبَ كما يَنفي الكِيرُ خَبَثَ الحَديدِ»
+              </p>
+              <footer>
+                <cite
+                  >رواه النسائي وصحَّحه الألباني — من حديث ابن مسعود رضي الله
+                  عنه</cite
+                >
+              </footer>
+            </blockquote>
+
+            <blockquote class="hadith-card">
+              <div class="hadith-icon" aria-hidden="true">📿</div>
+              <p>
+                «ما مِن يَومٍ أكثرَ أن يُعتِقَ اللهُ فيه عبداً من النَّارِ مِن
+                يَومِ عَرَفَة»
+              </p>
+              <footer>
+                <cite>رواه مسلم — من حديث عائشة رضي الله عنها</cite>
+              </footer>
+            </blockquote>
+
+            <blockquote class="hadith-card">
+              <div class="hadith-icon" aria-hidden="true">📿</div>
+              <p>«الحجُّ عَرَفَة، فَمَن أدركَ عرفةَ فقد أدركَ الحج»</p>
+              <footer>
+                <cite>رواه الترمذي وأبو داود وصحَّحه الألباني</cite>
+              </footer>
+            </blockquote>
+
+            <blockquote class="hadith-card">
+              <div class="hadith-icon" aria-hidden="true">📿</div>
+              <p>
+                «السَّائحُ في سبيلِ اللهِ الصَّائمُ في الشَّهرِ الذي يُهلَّلُ
+                فيه أفضلُ من ألفِ حَجَّةٍ في غيرِ الحجِّ» — يقصدُ ذا الحجة
+              </p>
+              <footer><cite>إشارة إلى فضل أيام ذي الحجة</cite></footer>
+            </blockquote>
+          </div>
+
+          <div class="hadith-controls" aria-label="أزرار التنقل">
+            <button
+              class="hadith-btn"
+              id="hadithPrev"
+              aria-label="الحديث السابق"
+            >
+              &#8594;
+            </button>
+            <div
+              class="hadith-dots"
+              id="hadithDots"
+              role="list"
+              aria-label="مؤشرات الحديث"
+            ></div>
+            <button
+              class="hadith-btn"
+              id="hadithNext"
+              aria-label="الحديث التالي"
+            >
+              &#8592;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== HADY (PROPHET'S GUIDANCE) ====== -->
+    <section class="section" id="hady" aria-labelledby="hady-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="hady-heading">هَديُ النَّبيِّ ﷺ في الحج</h2>
+          <div class="divider" aria-hidden="true"><span>✦</span></div>
+          <p class="section-intro">
+            حجَّ النبيُّ ﷺ مرةً واحدةً بعد الهجرة، وهي حجةُ الوَداع عامَ عشرةٍ
+            من الهجرة. وقد خطبَ فيها خُطبتَه الشهيرة في عرفات، وأوصى الأمةَ
+            بوصايا خالدة.
+          </p>
+        </header>
+
+        <div class="hady-grid">
+          <figure class="hady-image-wrap">
+            <img
+              src="images/manask.jpg"
+              alt="تصوير لمشاعر الحج"
+              loading="lazy"
+              onerror="this.closest('figure').classList.add('img-placeholder')"
+            />
+            <figcaption>حجةُ الوداع — العامُ العاشر من الهجرة</figcaption>
+          </figure>
+
+          <div class="hady-points">
+            <article class="hady-point">
+              <h3>⟵ الإفراد أو القِران</h3>
+              <p>
+                يرى جمهورُ أهلِ العلم أنَّ النبيَّ ﷺ كان قارناً بينَ الحجِّ
+                والعمرة، وكان معه الهَدْي فلم يتحلَّل. وأمرَ الصحابةَ الذين لم
+                يَسوقوا الهَدْيَ أن يُحوِّلوا إحرامَهم إلى عمرة.
+              </p>
+            </article>
+
+            <article class="hady-point">
+              <h3>⟵ الخطبة في عرفات</h3>
+              <p>خطبَ النبيُّ ﷺ في الناسِ يومَ عرفة وقال في خطبته:</p>
+              <blockquote>
+                <p>
+                  «أيُّها النَّاسُ، إنَّ دِمَاءَكُم وأموالَكم وأعراضَكم حرامٌ
+                  عليكم كحُرمةِ يومِكم هذا في شهرِكم هذا في بلدِكم هذا...»
+                </p>
+                <cite>متفق عليه</cite>
+              </blockquote>
+            </article>
+
+            <article class="hady-point">
+              <h3>⟵ أخذ المناسك</h3>
+              <p>
+                قال ﷺ: «خُذُوا عنِّي مَنَاسِكَكُم، فإنِّي لا أدري لَعَلِّي لا
+                أحجُّ بعدَ حَجَّتي هذه»
+              </p>
+              <cite>رواه مسلم</cite>
+            </article>
+
+            <article class="hady-point">
+              <h3>⟵ الرفق والتيسير</h3>
+              <p>
+                كان ﷺ في حجته يُسأل عن تقديمٍ وتأخيرٍ في المناسك، فيقول: «افعل
+                ولا حرج» حتى ما سُئِلَ عن شيءٍ قُدِّم ولا أُخِّرَ إلا قال ذلك.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== COMPANIONS ====== -->
+    <section
+      class="section section-alt"
+      id="companions"
+      aria-labelledby="companions-heading"
+    >
+      <div class="container">
+        <header class="section-header">
+          <h2 id="companions-heading">أقوالُ الصَّحابةِ الكِرام</h2>
+          <div class="divider" aria-hidden="true"><span>✦</span></div>
+        </header>
+
+        <div class="companions-grid">
+          <article class="companion-card" data-visible="false">
+            <header class="companion-header">
+              <div class="companion-avatar" aria-hidden="true">ع</div>
+              <div>
+                <h3>عبد الله بن عمر رضي الله عنهما</h3>
+                <p class="companion-title">راوي السنة والمتبعُ لآثار النبي ﷺ</p>
+              </div>
+            </header>
+            <blockquote>
+              <p>
+                «كانَ ابنُ عمرَ لا يَدَعُ مَكاناً أَحلَّ فيه النبيُّ ﷺ إلا صلَّى
+                فيه»
+              </p>
+            </blockquote>
+            <p class="companion-note">
+              وكان ابنُ عمرَ يحجُّ كثيراً ويتتبَّعُ آثارَ النبيِّ ﷺ في مناسكِه
+              بدقَّةٍ بالغة.
+            </p>
+          </article>
+
+          <article class="companion-card" data-visible="false">
+            <header class="companion-header">
+              <div class="companion-avatar" aria-hidden="true">ع</div>
+              <div>
+                <h3>عائشة رضي الله عنها</h3>
+                <p class="companion-title">أمُّ المؤمنين وأعلمُ النساء</p>
+              </div>
+            </header>
+            <blockquote>
+              <p>
+                «يا رسولَ اللهِ، أعلى النِّساءِ جهادٌ؟ قال: نعم، عليهنَّ جهادٌ
+                لا قتالَ فيه: الحجُّ والعمرة»
+              </p>
+              <cite>رواه أحمد وابن ماجه وصحَّحه الألباني</cite>
+            </blockquote>
+          </article>
+
+          <article class="companion-card" data-visible="false">
+            <header class="companion-header">
+              <div class="companion-avatar" aria-hidden="true">أ</div>
+              <div>
+                <h3>أبو هريرة رضي الله عنه</h3>
+                <p class="companion-title">أكثرُ الصحابة رواية للحديث</p>
+              </div>
+            </header>
+            <blockquote>
+              <p>
+                «سُئِلَ النبيُّ ﷺ: أيُّ العملِ أفضل؟ قال: إيمانٌ باللهِ ورسوله.
+                قيل: ثم ماذا؟ قال: الجهادُ في سبيلِ الله. قيل: ثم ماذا؟ قال:
+                حجٌّ مبرور»
+              </p>
+              <cite>متفق عليه</cite>
+            </blockquote>
+          </article>
+
+          <article class="companion-card" data-visible="false">
+            <header class="companion-header">
+              <div class="companion-avatar" aria-hidden="true">ج</div>
+              <div>
+                <h3>جابر بن عبد الله رضي الله عنه</h3>
+                <p class="companion-title">راوي حجة الوداع</p>
+              </div>
+            </header>
+            <blockquote>
+              <p>
+                «مَن كانَ معه هَدْيٌ فلْيُهِلَّ بالحجِّ والعُمرةِ ثم لا يَحِلَّ
+                حتَّى يَحِلَّ مِنهُما جميعاً»
+              </p>
+              <cite>من رواية جابر في صفة حجة الوداع — رواه مسلم</cite>
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== UMRAH DETAILS ====== -->
+    <section class="section" id="umrah" aria-labelledby="umrah-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="umrah-heading">صِفةُ العُمرة</h2>
+          <div class="divider" aria-hidden="true"><span>✦</span></div>
+        </header>
+
+        <div class="umrah-steps">
+          <figure class="umrah-image-wrap">
+            <img
+              src="images/Ihram.webp"
+              alt="خطوات أداء العمرة"
+              loading="lazy"
+              onerror="this.closest('figure').classList.add('img-placeholder')"
+            />
+          </figure>
+
+          <ol class="umrah-list">
+            <li>
+              <span class="step-badge">١</span>
+              <div>
+                <h3>الإحرام</h3>
+                <p>
+                  الاغتسال والتطيُّب ولبسُ ثوبَي الإحرام، ثم النيةُ بالدخول في
+                  العمرة من الميقات قائلاً: «لَبَّيكَ اللَّهُمَّ عُمرةً».
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">٢</span>
+              <div>
+                <h3>الطواف</h3>
+                <p>
+                  سبعةُ أشواطٍ حول الكعبة المشرَّفة، يبدأ باستلام الحجر الأسود
+                  أو الإشارة إليه، مع الذكر والدعاء.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">٣</span>
+              <div>
+                <h3>ركعتا الطواف</h3>
+                <p>
+                  يصلِّي ركعتَين خلف مقام إبراهيم إن تيسَّر، أو في أيِّ مكانٍ من
+                  المسجد الحرام.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">٤</span>
+              <div>
+                <h3>السعي</h3>
+                <p>
+                  سبعةُ أشواطٍ بين الصفا والمروة، يبدأ بالصفا ويختم بالمروة،
+                  مستحضِراً سنةَ هاجر عليها السلام.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">٥</span>
+              <div>
+                <h3>الحلق أو التقصير</h3>
+                <p>
+                  الحلقُ أفضلُ للرجل، والتقصيرُ للمرأة. وبه يتحلَّل المعتمِرُ من
+                  إحرامه ويحلُّ له كلُّ شيء.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- UMRAH HADITHS PANEL -->
+        <div class="info-box">
+          <h3>🕌 عمرات النبي ﷺ الأربع</h3>
+          <ul>
+            <li>
+              <strong>عمرة الحديبية:</strong> ذي القعدة سنة ٦ هـ — صُدَّ عنها
+              فكانت بيعةُ الرضوان.
+            </li>
+            <li>
+              <strong>عمرة القضاء:</strong> ذي القعدة سنة ٧ هـ — قضاءٌ للعمرة
+              التي صُدَّ عنها.
+            </li>
+            <li>
+              <strong>عمرة الجِعرَّانة:</strong> ذي القعدة سنة ٨ هـ — بعد غزوة
+              حُنين.
+            </li>
+            <li>
+              <strong>عمرة مع حجة الوداع:</strong> ذي الحجة سنة ١٠ هـ — قرنَها
+              مع الحج.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DUAS ====== -->
+    <section
+      class="section section-duas"
+      id="duas"
+      aria-labelledby="duas-heading"
+    >
+      <div class="container">
+        <header class="section-header">
+          <h2 id="duas-heading">أدعيةٌ مأثورة</h2>
+          <div class="divider" aria-hidden="true"><span>✦</span></div>
+        </header>
+
+        <div class="duas-grid">
+          <article class="dua-card">
+            <h3>دعاءُ الطواف</h3>
+            <p class="dua-arabic">
+              «رَبَّنَا آتِنَا فِي الدُّنيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً
+              وَقِنَا عَذَابَ النَّار»
+            </p>
+            <p class="dua-source">يُستحبُّ قولُه بين الركنَين اليَمانيَّين</p>
+          </article>
+
+          <article class="dua-card">
+            <h3>دعاءُ الصفا والمروة</h3>
+            <p class="dua-arabic">
+              «لَا إِلَهَ إِلَّا اللَّهُ وَحدَهُ لَا شَريكَ لَه، لَهُ المُلكُ
+              ولَهُ الحَمدُ يُحيِي ويُميتُ وهوَ علَى كلِّ شَيءٍ قَديرٌ»
+            </p>
+            <p class="dua-source">يُقالُ على الصفا والمروة</p>
+          </article>
+
+          <article class="dua-card">
+            <h3>دعاءُ يوم عرفة</h3>
+            <p class="dua-arabic">
+              «لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ
+              الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ»
+            </p>
+            <p class="dua-source">
+              «خيرُ الدعاءِ دعاءُ يومِ عرفة» — رواه الترمذي
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-logo">
+          <span class="logo-main">تَرجَمَاتُ</span>
+          <span class="logo-accent">السُّنَّة</span>
+        </div>
+        <p class="footer-desc">
+          موقعٌ علميٌّ متخصِّصٌ في نشرِ أحكامِ العباداتِ وفقَ الكتابِ والسنَّة
+          الصَّحيحة.
+        </p>
+        <nav class="footer-nav" aria-label="روابط التنقل السريع">
+          <a href="#about">تعريف</a>
+          <a href="#rulings">الأحكام</a>
+          <a href="#manasik">المناسك</a>
+          <a href="#hadiths">الأحاديث</a>
+          <a href="#hady">هدي النبي</a>
+          <a href="#companions">الصحابة</a>
+          <a href="#umrah">العمرة</a>
+        </nav>
+        <p class="footer-copy">
+          جميعُ المعلوماتِ مستقاةٌ من المصادرِ الشرعيَّة الموثوقة ·
+          <span>١٤٤٦ هـ</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ====== BACK TO TOP ====== -->
+    <button
+      class="back-to-top"
+      id="backToTop"
+      aria-label="العودة إلى الأعلى"
+      hidden
+    >
+      ↑
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
