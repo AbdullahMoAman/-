@@ -13,42 +13,102 @@
 'use strict';
 
 /* ========================================================
-   SECTION 1 — Navbar
+   SECTION 1 — Navbar & Side Drawer
    ======================================================== */
-const header     = document.querySelector('.site-header');
-const navToggle  = document.getElementById('navToggle');
-const navLinks   = document.getElementById('navLinks');
-const allNavAnchors = navLinks.querySelectorAll('a');
+const header         = document.querySelector('.site-header');
+const navToggle      = document.getElementById('navToggle');
+const navDrawer      = document.getElementById('navDrawer');
+const drawerClose    = document.getElementById('drawerClose');
+const drawerBackdrop = document.getElementById('drawerBackdrop');
+const drawerLinks    = document.querySelectorAll('#drawerLinks a');
+const directNavLinks = document.querySelectorAll('.nav-direct-links a');
+const allNavAnchors  = document.querySelectorAll('.nav-direct-links a, #drawerLinks a');
+const backToTopBtn   = document.getElementById('backToTop');
 
-// Scroll effect: add glass background after 60px
-function onScroll() {
-  const scrolled = window.scrollY > 60;
-  header.classList.toggle('scrolled', scrolled);
-  backToTopBtn.hidden = !scrolled;
-  trackActiveSection();
+// Open / Close Drawer
+function openDrawer() {
+  if (!navDrawer) return;
+  navDrawer.classList.add('drawer-open');
+  if (drawerBackdrop) drawerBackdrop.classList.add('active');
+  if (navToggle) {
+    navToggle.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  }
+  document.body.style.overflow = 'hidden';
 }
 
-// Mobile hamburger toggle
-navToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.classList.toggle('open', isOpen);
-  navToggle.setAttribute('aria-expanded', String(isOpen));
-});
-
-// Close nav when a link is clicked on mobile
-allNavAnchors.forEach(a => {
-  a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
+function closeDrawer() {
+  if (!navDrawer) return;
+  navDrawer.classList.remove('drawer-open');
+  if (drawerBackdrop) drawerBackdrop.classList.remove('active');
+  if (navToggle) {
     navToggle.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
+  }
+  document.body.style.overflow = '';
+}
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navDrawer && navDrawer.classList.contains('drawer-open');
+    if (isOpen) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  });
+}
+
+if (drawerClose) {
+  drawerClose.addEventListener('click', closeDrawer);
+}
+
+if (drawerBackdrop) {
+  drawerBackdrop.addEventListener('click', closeDrawer);
+}
+
+// Close drawer on Escape key
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navDrawer && navDrawer.classList.contains('drawer-open')) {
+    closeDrawer();
+  }
+});
+
+// Close drawer when any drawer link is clicked
+drawerLinks.forEach(a => {
+  a.addEventListener('click', () => {
+    closeDrawer();
   });
 });
 
+// Scroll effect: add solid background after 60px
+function onScroll() {
+  const scrolled = window.scrollY > 60;
+  if (header) header.classList.toggle('scrolled', scrolled);
+  if (backToTopBtn) {
+    backToTopBtn.hidden = !scrolled;
+  }
+  trackActiveSection();
+}
+
 // Track which section is visible and highlight corresponding nav link
-const sectionIds = ['about', 'rulings', 'manasik', 'hadiths', 'hady', 'companions', 'umrah'];
+const sectionIds = [
+  'adhkar',
+  'references',
+  'about',
+  'rulings',
+  'manasik',
+  'hadiths',
+  'hady',
+  'companions',
+  'umrah',
+  'about-us',
+  'goals',
+  'contact'
+];
 
 function trackActiveSection() {
-  const scrollMid = window.scrollY + window.innerHeight * 0.45;
+  const scrollMid = window.scrollY + window.innerHeight * 0.4;
 
   let currentId = null;
   for (const id of sectionIds) {
@@ -207,26 +267,26 @@ tabButtons.forEach(btn => {
 /* ========================================================
    SECTION 5 — Back to Top
    ======================================================== */
-const backToTopBtn = document.getElementById('backToTop');
-
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 
 /* ========================================================
    SECTION 6 — Logo Shimmer / Pulse on Load
    ======================================================== */
 function animateLogo() {
-  const logoAccent = document.querySelector('.logo-accent');
-  if (!logoAccent) return;
+  const brandAccent = document.querySelector('.brand-accent, .logo-accent');
+  if (!brandAccent) return;
 
   // Add a brief shimmer class, then remove
-  logoAccent.style.transition = 'color 0.6s ease, text-shadow 0.6s ease';
-  logoAccent.style.textShadow = '0 0 18px rgba(201,168,76,0.7)';
+  brandAccent.style.transition = 'color 0.6s ease, text-shadow 0.6s ease';
+  brandAccent.style.textShadow = '0 0 18px rgba(201,168,76,0.7)';
 
   setTimeout(() => {
-    logoAccent.style.textShadow = '';
+    brandAccent.style.textShadow = '';
   }, 1800);
 }
 
@@ -280,3 +340,81 @@ if (heroImg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     bar.style.width   = progress.toFixed(1) + '%';
   }, { passive: true });
 })();
+
+
+/* ========================================================
+   SECTION 9 — Adhkar Filter Tabs & Copy Button
+   ======================================================== */
+const adhkarTabBtns = document.querySelectorAll('.adhkar-tab-btn');
+const dhikrCards    = document.querySelectorAll('.dhikr-card');
+
+adhkarTabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    adhkarTabBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+
+    const filter = btn.getAttribute('data-filter');
+    dhikrCards.forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-stage') === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Toast notification for copying
+function showCopyToast(msg = 'تم نسخ الذكر بنجاح ✓') {
+  let toast = document.querySelector('.copy-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2400);
+}
+
+// Copy dhikr text
+document.querySelectorAll('.btn-copy-dhikr').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.getAttribute('data-clipboard-target');
+    const textEl = document.getElementById(targetId);
+    if (!textEl) return;
+
+    const textToCopy = textEl.textContent.trim();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showCopyToast();
+      }).catch(() => {
+        fallbackCopy(textToCopy);
+      });
+    } else {
+      fallbackCopy(textToCopy);
+    }
+  });
+});
+
+function fallbackCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    showCopyToast();
+  } catch (err) {
+    showCopyToast('تعذر النسخ تلقائياً');
+  }
+  document.body.removeChild(ta);
+}

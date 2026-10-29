@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="مؤلفات فضيلة الشيخ أ.د. عبدالرحمن بن عبدالكريم بن إبراهيم الزيد - نموذج مبدئي قابل للتعديل"
+    />
+    <title>مؤلفات أ.د. عبدالرحمن بن عبدالكريم إبراهيم الزيد - نموذج مبدئي</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .pub-page-hero {
+        padding-top: calc(90px + var(--spacing-lg));
+        padding-bottom: var(--spacing-lg);
+        background: linear-gradient(160deg, #0d2e1a 0%, #1a4a2e 60%, #2d1a0d 100%);
+        color: var(--clr-white);
+        text-align: center;
+        position: relative;
+      }
+      .pub-page-title {
+        font-size: var(--fs-2xl);
+        color: var(--clr-gold-light);
+        margin-bottom: var(--spacing-xs);
+        font-weight: 800;
+      }
+      .pub-page-subtitle {
+        color: var(--clr-cream);
+        font-size: var(--fs-md);
+        max-width: 800px;
+        margin-inline: auto;
+        opacity: 0.95;
+      }
+      .pub-notice-box {
+        background: rgba(201, 168, 76, 0.12);
+        border: 2px dashed var(--clr-gold);
+        border-radius: var(--radius-md);
+        padding: var(--spacing-md);
+        margin-block: var(--spacing-md);
+        text-align: center;
+        color: var(--clr-green);
+      }
+      .pub-notice-box h3 {
+        color: var(--clr-green);
+        margin-bottom: 0.35rem;
+        font-size: var(--fs-lg);
+      }
+      .pub-template-card {
+        background: var(--clr-white);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+        box-shadow: var(--shadow-card);
+        border-right: 6px solid var(--clr-gold);
+        transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      }
+      .pub-template-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px var(--clr-shadow);
+      }
+      .pub-template-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-bottom: 1px solid var(--clr-cream-dark);
+        padding-bottom: var(--spacing-sm);
+        flex-wrap: wrap;
+      }
+      .pub-title-placeholder {
+        font-size: var(--fs-xl);
+        font-weight: 800;
+        color: var(--clr-green);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .blank-line {
+        display: inline-block;
+        min-width: 240px;
+        border-bottom: 2px dotted var(--clr-gold);
+        color: var(--clr-text-muted);
+        font-family: var(--ff-ui);
+        font-size: var(--fs-base);
+        font-weight: normal;
+        padding-inline: 8px;
+      }
+      .pub-meta-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+        background: var(--clr-cream);
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--radius-md);
+      }
+      .pub-meta-item {
+        font-size: var(--fs-sm);
+        color: var(--clr-text);
+      }
+      .pub-meta-item strong {
+        color: var(--clr-green);
+      }
+      .pub-chapters-wrap {
+        margin-top: var(--spacing-sm);
+      }
+      .pub-chapters-title {
+        font-weight: 700;
+        color: var(--clr-green-mid);
+        margin-bottom: var(--spacing-xs);
+        font-size: var(--fs-md);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .chapters-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0.65rem;
+        padding: 0;
+        margin: 0;
+      }
+      .chapter-item {
+        background: var(--clr-white);
+        border: 1px solid var(--clr-cream-dark);
+        border-radius: var(--radius-sm);
+        padding: 0.55rem 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--fs-sm);
+      }
+      .chapter-num {
+        background: linear-gradient(135deg, var(--clr-green), var(--clr-green-mid));
+        color: var(--clr-gold-light);
+        padding: 0.15rem 0.5rem;
+        border-radius: var(--radius-pill);
+        font-size: var(--fs-xs);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .back-nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: var(--spacing-sm);
+        border-bottom: 1px solid var(--clr-cream-dark);
+        margin-bottom: var(--spacing-lg);
+      }
+      .btn-back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--clr-green);
+        color: var(--clr-gold-light);
+        padding: 0.55rem 1.4rem;
+        border-radius: var(--radius-pill);
+        font-family: var(--ff-ui);
+        font-size: var(--fs-sm);
+        font-weight: 700;
+        transition: all var(--transition-fast);
+      }
+      .btn-back-home:hover {
+        background: var(--clr-gold);
+        color: var(--clr-green);
+        transform: translateX(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ====== HEADER & NAV ====== -->
+    <header class="site-header scrolled" id="top">
+      <nav class="navbar" role="navigation" aria-label="القائمة الرئيسية">
+        <a
+          href="index.html"
+          class="navbar-brand"
+          aria-label="جمعية السنة النبوية - الصفحة الرئيسية"
+        >
+          <span class="brand-main">جَمعِيَّةُ</span>
+          <span class="brand-accent">السُّنَّةِ النَّبَوِيَّة</span>
+        </a>
+
+        <div class="navbar-logo">
+          <a href="index.html" aria-label="شعار جمعية السنة النبوية">
+            <img
+              src="images/logo-transparent.png"
+              alt="شعار جمعية السنة النبوية"
+              class="logo-img"
+            />
+          </a>
+        </div>
+
+        <div class="navbar-left">
+          <a href="index.html" class="btn-back-home">
+            <span>العودة للموقع الرئيسي</span>
+            <span>←</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ====== HERO ====== -->
+    <section class="pub-page-hero">
+      <div class="container">
+        <p class="hero-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <h1 class="pub-page-title">
+          مُؤَلَّفَاتُ أ.د. عَبدِالرَّحمَن عَبدِالكَرِيم إِبرَاهِيم الزَّيد
+        </h1>
+        <p class="pub-page-subtitle">
+          المكتبة العلمية والمؤلفات الفقهية — نموذج مبدئي قابل للتعبئة والتعديل مخصص لعرض هيكلية المؤلفات والأبواب
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main class="section">
+      <div class="container">
+        <div class="back-nav-bar">
+          <a href="index.html" class="btn-back-home">
+            <span>← العودة إلى الصفحة الرئيسية (أذكار الحج)</span>
+          </a>
+          <span style="font-size: var(--fs-sm); color: var(--clr-text-muted); font-family: var(--ff-ui);">
+            مؤلفات وبحوث فضيلة الشيخ أ.د. عبدالرحمن الزيد
+          </span>
+        </div>
+
+        <!-- Explanatory Notice for Client Review -->
+        <div class="pub-notice-box">
+          <h3>📌 نموذج مبدئي للعرض والمراجعة</h3>
+          <p>
+            تم إعداد هذا النموذج بصيغة قابلة للتعديل والملء، بحيث يمكن إضافة عناوين المؤلفات الحقيقية ونبذة عن كل مؤلف وفصوله وأبوابه ورابط قراءته أو تحميله لاحقاً حسب رغبة العميل.
+          </p>
+        </div>
+
+        <!-- Prototype Book 1 -->
+        <article class="pub-template-card">
+          <div class="pub-template-header">
+            <div class="pub-title-placeholder">
+              <span>📚</span>
+              <span>المؤلف الأول:</span>
+              <span class="blank-line">[ عنوان الكتاب / المؤلف يُكتب هنا ]</span>
+            </div>
+            <span class="pub-tag" style="background: rgba(201,168,76,0.18); color: var(--clr-gold-dark); padding: 0.3rem 0.8rem; border-radius: var(--radius-pill); font-size: var(--fs-xs); font-weight: bold;">
+              نموذج جاهز للتعديل
+            </span>
+          </div>
+
+          <div class="pub-meta-row">
+            <div class="pub-meta-item">
+              <strong>نبذة عن المؤلف:</strong>
+              <span class="blank-line">[ نبذة موجزة عن الكتاب وموضوعه وأهميته الشرعية ]</span>
+            </div>
+            <div class="pub-meta-item">
+              <strong>التصنيف العلمي:</strong>
+              <span class="blank-line">[ فقه المناسك / حديث / دراسات مقارنة ]</span>
+            </div>
+          </div>
+
+          <div class="pub-chapters-wrap">
+            <div class="pub-chapters-title">
+              <span>📖</span>
+              <span>فهرس الأبواب والفصول:</span>
+            </div>
+            <ul class="chapters-list">
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الأول</span>
+                <span class="blank-line">[ عنوان الباب الأول ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الثاني</span>
+                <span class="blank-line">[ عنوان الباب الثاني ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الثالث</span>
+                <span class="blank-line">[ عنوان الباب الثالث ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الرابع</span>
+                <span class="blank-line">[ عنوان الباب الرابع ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الخامس</span>
+                <span class="blank-line">[ عنوان الباب الخامس ]</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Prototype Book 2 -->
+        <article class="pub-template-card">
+          <div class="pub-template-header">
+            <div class="pub-title-placeholder">
+              <span>📚</span>
+              <span>المؤلف الثاني:</span>
+              <span class="blank-line">[ عنوان الكتاب / المؤلف يُكتب هنا ]</span>
+            </div>
+            <span class="pub-tag" style="background: rgba(201,168,76,0.18); color: var(--clr-gold-dark); padding: 0.3rem 0.8rem; border-radius: var(--radius-pill); font-size: var(--fs-xs); font-weight: bold;">
+              نموذج جاهز للتعديل
+            </span>
+          </div>
+
+          <div class="pub-meta-row">
+            <div class="pub-meta-item">
+              <strong>نبذة عن المؤلف:</strong>
+              <span class="blank-line">[ نبذة موجزة عن موضوع الكتاب ]</span>
+            </div>
+            <div class="pub-meta-item">
+              <strong>التصنيف العلمي:</strong>
+              <span class="blank-line">[ أحكام العبادات / سنن الحج والعمرة ]</span>
+            </div>
+          </div>
+
+          <div class="pub-chapters-wrap">
+            <div class="pub-chapters-title">
+              <span>📖</span>
+              <span>فهرس الأبواب والفصول:</span>
+            </div>
+            <ul class="chapters-list">
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الأول</span>
+                <span class="blank-line">[ عنوان الباب الأول ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الثاني</span>
+                <span class="blank-line">[ عنوان الباب الثاني ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الثالث</span>
+                <span class="blank-line">[ عنوان الباب الثالث ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الرابع</span>
+                <span class="blank-line">[ عنوان الباب الرابع ]</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Prototype Book 3 -->
+        <article class="pub-template-card">
+          <div class="pub-template-header">
+            <div class="pub-title-placeholder">
+              <span>📚</span>
+              <span>المؤلف الثالث:</span>
+              <span class="blank-line">[ عنوان الكتاب / المؤلف يُكتب هنا ]</span>
+            </div>
+            <span class="pub-tag" style="background: rgba(201,168,76,0.18); color: var(--clr-gold-dark); padding: 0.3rem 0.8rem; border-radius: var(--radius-pill); font-size: var(--fs-xs); font-weight: bold;">
+              نموذج جاهز للتعديل
+            </span>
+          </div>
+
+          <div class="pub-meta-row">
+            <div class="pub-meta-item">
+              <strong>نبذة عن المؤلف:</strong>
+              <span class="blank-line">[ نبذة موجزة عن موضوع البحث أو الرسالة ]</span>
+            </div>
+            <div class="pub-meta-item">
+              <strong>التصنيف العلمي:</strong>
+              <span class="blank-line">[ دراسات حديثية / فتاوى وتوجيهات ]</span>
+            </div>
+          </div>
+
+          <div class="pub-chapters-wrap">
+            <div class="pub-chapters-title">
+              <span>📖</span>
+              <span>فهرس الأبواب والفصول:</span>
+            </div>
+            <ul class="chapters-list">
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الأول</span>
+                <span class="blank-line">[ عنوان الباب الأول ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الثاني</span>
+                <span class="blank-line">[ عنوان الباب الثاني ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الثالث</span>
+                <span class="blank-line">[ عنوان الباب الثالث ]</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Prototype Book 4 -->
+        <article class="pub-template-card">
+          <div class="pub-template-header">
+            <div class="pub-title-placeholder">
+              <span>📚</span>
+              <span>المؤلف الرابع:</span>
+              <span class="blank-line">[ عنوان الكتاب / المؤلف يُكتب هنا ]</span>
+            </div>
+            <span class="pub-tag" style="background: rgba(201,168,76,0.18); color: var(--clr-gold-dark); padding: 0.3rem 0.8rem; border-radius: var(--radius-pill); font-size: var(--fs-xs); font-weight: bold;">
+              نموذج جاهز للتعديل
+            </span>
+          </div>
+
+          <div class="pub-meta-row">
+            <div class="pub-meta-item">
+              <strong>نبذة عن المؤلف:</strong>
+              <span class="blank-line">[ نبذة موجزة عن العمل العلمي ]</span>
+            </div>
+            <div class="pub-meta-item">
+              <strong>التصنيف العلمي:</strong>
+              <span class="blank-line">[ فتاوى معاصرة / نوازل الحج والعمرة ]</span>
+            </div>
+          </div>
+
+          <div class="pub-chapters-wrap">
+            <div class="pub-chapters-title">
+              <span>📖</span>
+              <span>فهرس الأبواب والفصول:</span>
+            </div>
+            <ul class="chapters-list">
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الأول</span>
+                <span class="blank-line">[ عنوان الباب الأول ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الثاني</span>
+                <span class="blank-line">[ عنوان الباب الثاني ]</span>
+              </li>
+              <li class="chapter-item">
+                <span class="chapter-num">الباب الثالث</span>
+                <span class="blank-line">[ عنوان الباب الثالث ]</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+          <a href="index.html" class="btn-back-home" style="font-size: var(--fs-base); padding: 0.75rem 2rem;">
+            <span>← العودة إلى الموقع الرئيسي (أذكار الحج)</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-logo">
+          <span class="logo-main">جَمعِيَّةُ</span>
+          <span class="logo-accent">السُّنَّةِ النَّبَوِيَّة</span>
+        </div>
+        <p class="footer-desc">
+          موقعٌ علميٌّ متخصِّصٌ في نشرِ أحكامِ العباداتِ وأذكارِ الحجِّ وفقَ الكتابِ والسنَّة الصَّحيحة.
+        </p>
+        <p class="footer-copy">
+          جميعُ الحقوقِ محفوظة · جمعية السنة النبوية · <span>١٤٤٦ هـ</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
