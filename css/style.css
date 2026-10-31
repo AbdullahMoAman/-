@@ -1534,6 +1534,19 @@ blockquote {
   .navbar {
     min-height: 86px;
   }
+
+  /* publications page */
+  .btn-back-home {
+    font-size: var(--fs-xs);
+  }
+
+  .brand-accent {
+    font-size: var(--fs-xs);
+  }
+  .footer-desc {
+    font-size: var(--fs-xs);
+    max-width: 280px;
+  }
 }
 
 @media (max-width: 860px) {
