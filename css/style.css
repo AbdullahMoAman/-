@@ -230,7 +230,7 @@ blockquote {
 }
 
 .brand-main {
-  font-size: var(--fs-md);
+  font-size: var(--fs-xl);
   font-weight: 700;
   color: var(--clr-gold-light);
   letter-spacing: 0.04em;
@@ -1461,8 +1461,9 @@ blockquote {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
 }
 
 .footer-nav a {
@@ -2197,7 +2198,8 @@ blockquote {
 .references-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-sm);
+  /* gap: var(--spacing-sm); */
+  gap: 1rem;
   margin-top: var(--spacing-md);
 }
 
@@ -2229,7 +2231,7 @@ blockquote {
 
 .ref-content span {
   color: var(--clr-text-muted);
-  font-size: var(--fs-xs);
+  font-size: var(--fs-md);
 }
 
 /* Copy notification toast */
